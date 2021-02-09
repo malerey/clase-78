@@ -18,10 +18,10 @@ const obtenerUsuariosyHacerHTML = () => {
       data.map(usuario => {
         lista.innerHTML += `<li>
 		${usuario.fullname}
-		<button data-userId=${usuario.id}>Borrar</button>
+		<button data-userId=${usuario.id} class="boton-borrar">Borrar</button>
 		</li>`;
       });
-      const listaDeBotones = document.querySelectorAll('button');
+      const listaDeBotones = document.querySelectorAll('.boton-borrar');
 
       // tengo que usar forEach, en lugar de map, porque listaDeBotones es una lista de nodos
       // de HTML, que no se puede recorrer con map (pero si con forEach)
